@@ -1,0 +1,20 @@
+default:
+    context:
+        parameters:
+            javascript_session:   sahi
+            base_url:             http://symfony.local/
+            show_cmd:             open %s
+
+    extensions:
+        Behat\Symfony2Extension\Extension:
+            mink_driver: true
+        Behat\MinkExtension\Extension:
+            base_url:    'http://symfony.local/'
+            default_session: sahi
+            javascript_session: sahi
+            sahi: ~
+
+    paths:
+        features: features
+    context:
+        class: Acme\DemoBundle\Features\Context\FeatureContext

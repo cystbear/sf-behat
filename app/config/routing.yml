@@ -1,0 +1,4 @@
+_acme_book:
+    resource: "@AcmeDemoBundle/Controller"
+    type:     annotation
+
